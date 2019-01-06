@@ -47,6 +47,7 @@ import android.os.HandlerThread;
 import android.support.annotation.NonNull;
 import android.support.v13.app.FragmentCompat;
 import android.support.v4.content.ContextCompat;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.util.Size;
 import android.view.LayoutInflater;
@@ -210,6 +211,7 @@ public class Camera2BasicFragment extends Fragment
             @Override
             public void run() {
               textView.setText(text);
+              textView.setMovementMethod(new ScrollingMovementMethod());
             }
           });
     }

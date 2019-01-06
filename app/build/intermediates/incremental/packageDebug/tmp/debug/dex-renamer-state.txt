@@ -1,4 +1,4 @@
-#Sun Jan 06 17:30:40 ICT 2019
+#Sun Jan 06 18:19:13 ICT 2019
 base.0=D\:\\Project\\PriceFinder\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
 path.1=classes.dex
 renamed.1=classes2.dex

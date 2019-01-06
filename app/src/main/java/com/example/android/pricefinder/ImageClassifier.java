@@ -226,7 +226,7 @@ public class ImageClassifier {
 
           for (int j = 0; j < productList.size(); j++){
               if (Integer.parseInt(label.getKey()) == productList.get(j).getItemID()){
-                  textToShow = String.format("%s, %s\nPrice IDR%d", productList.get(j).getItemName(), productList.get(j).getItemDescription(), productList.get(j).getItemPrice());
+                  textToShow = String.format("%s, %s\n\nPrice IDR%d", productList.get(j).getItemName(), productList.get(j).getItemDescription(), productList.get(j).getItemPrice());
                   break;
               }
               else{
