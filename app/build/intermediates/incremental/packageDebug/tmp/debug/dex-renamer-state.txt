@@ -1,7 +1,7 @@
-#Sun Jan 06 09:01:02 ICT 2019
-base.0=D\:\\Project\\tflite\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+#Sun Jan 06 16:07:41 ICT 2019
+base.0=D\:\\Project\\PriceFinder\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
 path.1=classes.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=D\:\\Project\\tflite\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
+base.1=D\:\\Project\\PriceFinder\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml:3:1-32:12
-INJECTED from D:\Project\tflite\app\src\main\AndroidManifest.xml:3:1-32:12
-INJECTED from D:\Project\tflite\app\src\main\AndroidManifest.xml:3:1-32:12
-INJECTED from D:\Project\tflite\app\src\main\AndroidManifest.xml:3:1-32:12
+ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:3:1-32:12
+INJECTED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:3:1-32:12
+INJECTED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:3:1-32:12
+INJECTED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:3:1-32:12
 MERGED from [com.android.support:design:26.1.0] C:\Users\Nicky\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\b3fb81493fd4f26b8da74029c713a288\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Nicky\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\a271b01305c18ac5a9c2551afaef176c\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\Nicky\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\7c434d51ff794d81f194b30822f790d5\AndroidManifest.xml:2:1-11:12
@@ -20,49 +20,49 @@ MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Nicky\.gradle\
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Nicky\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\b94cbc0bacfffac7d470a5003b31a5d3\AndroidManifest.xml:17:1-31:12
 MERGED from [org.tensorflow:tensorflow-lite:1.12.0] C:\Users\Nicky\.gradle\caches\transforms-1\files-1.1\tensorflow-lite-1.12.0.aar\711f9d2cc88261e2751c41ebeb690209\AndroidManifest.xml:2:1-11:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Nicky\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\b9ce7ff72a7c2c9fae585b3492f8a278\AndroidManifest.xml:17:1-30:12
-INJECTED from D:\Project\tflite\app\src\main\AndroidManifest.xml:3:1-32:12
-INJECTED from D:\Project\tflite\app\src\main\AndroidManifest.xml:3:1-32:12
-INJECTED from D:\Project\tflite\app\src\main\AndroidManifest.xml:3:1-32:12
+INJECTED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:3:1-32:12
+INJECTED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:3:1-32:12
+INJECTED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:3:1-32:12
 	package
-		ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml:4:5-46
-		INJECTED from D:\Project\tflite\app\src\main\AndroidManifest.xml
-		INJECTED from D:\Project\tflite\app\src\main\AndroidManifest.xml
+		ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:4:5-46
+		INJECTED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from D:\Project\tflite\app\src\main\AndroidManifest.xml
-		ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml:3:1-32:12
-		INJECTED from D:\Project\tflite\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml
+		ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:3:1-32:12
+		INJECTED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from D:\Project\tflite\app\src\main\AndroidManifest.xml
-		ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml:3:1-32:12
-		INJECTED from D:\Project\tflite\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml
+		ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:3:1-32:12
+		INJECTED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml:3:11-69
+		ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:3:11-69
 uses-permission#android.permission.CAMERA
-ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml:6:5-65
+ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:6:5-65
 	android:name
-		ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml:6:22-62
+		ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:6:22-62
 uses-feature#android.hardware.camera
-ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml:8:5-60
+ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:8:5-60
 	android:name
-		ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml:8:19-57
+		ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:8:19-57
 uses-feature#android.hardware.camera.autofocus
-ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml:9:5-70
+ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:9:5-70
 	android:name
-		ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml:9:19-67
+		ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:9:19-67
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml:11:5-81
+ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:11:5-81
 	android:name
-		ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml:11:22-78
+		ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:11:22-78
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml:12:5-75
+ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:12:5-75
 	android:name
-		ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml:12:22-72
+		ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:12:22-72
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml:13:5-80
+ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:13:5-80
 	android:name
-		ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml:13:22-77
+		ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:13:22-77
 application
-ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml:15:5-30:19
+ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:15:5-30:19
 MERGED from [com.android.support:design:26.1.0] C:\Users\Nicky\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\b3fb81493fd4f26b8da74029c713a288\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:design:26.1.0] C:\Users\Nicky\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\b3fb81493fd4f26b8da74029c713a288\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Nicky\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\a271b01305c18ac5a9c2551afaef176c\AndroidManifest.xml:25:5-29:19
@@ -96,37 +96,37 @@ MERGED from [org.tensorflow:tensorflow-lite:1.12.0] C:\Users\Nicky\.gradle\cache
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Nicky\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\b9ce7ff72a7c2c9fae585b3492f8a278\AndroidManifest.xml:24:5-28:19
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Nicky\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\b9ce7ff72a7c2c9fae585b3492f8a278\AndroidManifest.xml:24:5-28:19
 	android:label
-		ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml:18:9-41
+		ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:18:9-41
 	android:icon
-		ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml:17:9-45
+		ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:17:9-45
 	android:allowBackup
-		ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml:16:9-35
+		ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:16:9-35
 	android:theme
-		ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml:19:9-45
+		ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:19:9-45
 activity#com.example.android.pricefinder.CameraActivity
-ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml:21:9-29:20
+ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:21:9-29:20
 	android:label
-		ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml:23:13-45
+		ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:23:13-45
 	android:name
-		ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml:22:13-74
+		ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:22:13-74
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml:24:13-28:29
+ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:24:13-28:29
 action#android.intent.action.MAIN
-ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml:25:17-69
+ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:25:17-69
 	android:name
-		ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml:25:25-66
+		ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:25:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml:27:17-77
+ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:27:17-77
 	android:name
-		ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml:27:27-74
+		ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:27:27-74
 uses-permission#android.permission.INTERNET
-ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml:31:5-83
+ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:31:5-83
 	android:name
-		ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml:31:22-64
+		ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml:31:22-64
 uses-sdk
-INJECTED from D:\Project\tflite\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from D:\Project\tflite\app\src\main\AndroidManifest.xml
-INJECTED from D:\Project\tflite\app\src\main\AndroidManifest.xml
+INJECTED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml
+INJECTED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml
 MERGED from [com.android.support:design:26.1.0] C:\Users\Nicky\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\b3fb81493fd4f26b8da74029c713a288\AndroidManifest.xml:21:5-23:62
 MERGED from [com.android.support:design:26.1.0] C:\Users\Nicky\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\b3fb81493fd4f26b8da74029c713a288\AndroidManifest.xml:21:5-23:62
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Nicky\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\a271b01305c18ac5a9c2551afaef176c\AndroidManifest.xml:21:5-23:78
@@ -159,18 +159,18 @@ MERGED from [org.tensorflow:tensorflow-lite:1.12.0] C:\Users\Nicky\.gradle\cache
 MERGED from [org.tensorflow:tensorflow-lite:1.12.0] C:\Users\Nicky\.gradle\caches\transforms-1\files-1.1\tensorflow-lite-1.12.0.aar\711f9d2cc88261e2751c41ebeb690209\AndroidManifest.xml:5:5-7:41
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Nicky\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\b9ce7ff72a7c2c9fae585b3492f8a278\AndroidManifest.xml:20:5-22:41
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Nicky\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\b9ce7ff72a7c2c9fae585b3492f8a278\AndroidManifest.xml:20:5-22:41
-INJECTED from D:\Project\tflite\app\src\main\AndroidManifest.xml
-INJECTED from D:\Project\tflite\app\src\main\AndroidManifest.xml
+INJECTED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml
+INJECTED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml
 	tools:overrideLibrary
 		ADDED from [com.android.support:design:26.1.0] C:\Users\Nicky\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\b3fb81493fd4f26b8da74029c713a288\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from D:\Project\tflite\app\src\main\AndroidManifest.xml
-		ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml
-		INJECTED from D:\Project\tflite\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml
+		ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from D:\Project\tflite\app\src\main\AndroidManifest.xml
-		ADDED from D:\Project\tflite\app\src\main\AndroidManifest.xml
-		INJECTED from D:\Project\tflite\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml
+		ADDED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Project\PriceFinder\app\src\main\AndroidManifest.xml
 meta-data#android.support.VERSION
 ADDED from [com.android.support:design:26.1.0] C:\Users\Nicky\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\b3fb81493fd4f26b8da74029c713a288\AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Nicky\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\a271b01305c18ac5a9c2551afaef176c\AndroidManifest.xml:26:9-28:38

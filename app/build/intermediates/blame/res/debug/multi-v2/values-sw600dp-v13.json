@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Project\\tflite\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+            "outputFile": "D:\\Project\\PriceFinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Nicky\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a271b01305c18ac5a9c2551afaef176c\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
@@ -14,24 +14,7 @@
                     }
                 },
                 {
-                    "source": "D:\\Project\\tflite\\app\\src\\main\\res\\values-sw600dp\\template-dimens.xml",
-                    "from": {
-                        "startLines": "20,21",
-                        "startColumns": "4,4",
-                        "startOffsets": "676,745",
-                        "endColumns": "67,67",
-                        "endOffsets": "739,808"
-                    },
-                    "to": {
-                        "startLines": "18,19",
-                        "startColumns": "4,4",
-                        "startOffsets": "1170,1238",
-                        "endColumns": "67,67",
-                        "endOffsets": "1233,1301"
-                    }
-                },
-                {
-                    "source": "D:\\Project\\tflite\\app\\src\\main\\res\\values-sw600dp\\template-styles.xml",
+                    "source": "D:\\Project\\PriceFinder\\app\\src\\main\\res\\values-sw600dp\\template-styles.xml",
                     "from": {
                         "startLines": "18",
                         "startColumns": "4",
@@ -47,6 +30,23 @@
                         "endLines": "29",
                         "endColumns": "12",
                         "endOffsets": "1791"
+                    }
+                },
+                {
+                    "source": "D:\\Project\\PriceFinder\\app\\src\\main\\res\\values-sw600dp\\template-dimens.xml",
+                    "from": {
+                        "startLines": "20,21",
+                        "startColumns": "4,4",
+                        "startOffsets": "676,745",
+                        "endColumns": "67,67",
+                        "endOffsets": "739,808"
+                    },
+                    "to": {
+                        "startLines": "18,19",
+                        "startColumns": "4,4",
+                        "startOffsets": "1170,1238",
+                        "endColumns": "67,67",
+                        "endOffsets": "1233,1301"
                     }
                 },
                 {

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Project\\tflite\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
+            "outputFile": "D:\\Project\\PriceFinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Nicky\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a271b01305c18ac5a9c2551afaef176c\\res\\values-v11\\values-v11.xml",
@@ -15,7 +15,7 @@
                     }
                 },
                 {
-                    "source": "D:\\Project\\tflite\\app\\src\\main\\res\\values-v11\\template-styles.xml",
+                    "source": "D:\\Project\\PriceFinder\\app\\src\\main\\res\\values-v11\\template-styles.xml",
                     "from": {
                         "startLines": "19",
                         "startColumns": "4",
