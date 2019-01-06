@@ -19,10 +19,17 @@ import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 
 import com.example.android.pricefinder.model.Product;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 /** Main {@code Activity} class for the Camera app. */
 public class CameraActivity extends Activity {
@@ -39,23 +46,31 @@ public class CameraActivity extends Activity {
         }
 
         productList = new ArrayList<>();
-        DatabaseAccess databaseAccess = DatabaseAccess.getInstance(getApplicationContext());
-        databaseAccess.open();
-        Cursor cursor = databaseAccess.viewItem();
+        DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
+        DatabaseReference productRef = rootRef.child("product");
+        ValueEventListener valueEventListener = new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot ds : dataSnapshot.getChildren()){
+                    Product product = new Product();
+                    product.setItemID(ds.child("id").getValue(Integer.class));
+                    product.setItemName(ds.child("name").getValue(String.class));
+                    product.setItemDescription(ds.child("description").getValue(String.class));
+                    product.setItemPrice(ds.child("price").getValue(Integer.class));
+                    productList.add(product);
+                }
+            }
 
-        while (cursor.moveToNext()){
-            Product product = new Product();
-            product.setItemID(cursor.getInt(0));
-            product.setItemName(cursor.getString(1));
-            product.setItemDescription(cursor.getString(2));
-            product.setItemPrice(cursor.getInt(3));
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
 
-            productList.add(product);
-        }
+            }
+        };
+        productRef.addListenerForSingleValueEvent(valueEventListener);
 
-        databaseAccess.close();
         ProductPassing passing = ProductPassing.getInstance();
         passing.setPassingProductsList(productList);
     }
+
 
 }
