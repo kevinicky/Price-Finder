@@ -16,20 +16,46 @@ limitations under the License.
 package com.example.android.pricefinder;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
+
+import com.example.android.pricefinder.model.Product;
+
+import java.util.ArrayList;
 
 /** Main {@code Activity} class for the Camera app. */
 public class CameraActivity extends Activity {
 
-  @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_camera);
-    if (null == savedInstanceState) {
-      getFragmentManager()
-          .beginTransaction()
-          .replace(R.id.container, Camera2BasicFragment.newInstance())
-          .commit();
+    private ArrayList<Product> productList;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_camera);
+
+        if (null == savedInstanceState) {
+            getFragmentManager().beginTransaction().replace(R.id.container, Camera2BasicFragment.newInstance()).commit();
+        }
+
+        productList = new ArrayList<>();
+        DatabaseAccess databaseAccess = DatabaseAccess.getInstance(getApplicationContext());
+        databaseAccess.open();
+        Cursor cursor = databaseAccess.viewItem();
+
+        while (cursor.moveToNext()){
+            Product product = new Product();
+            product.setItemID(cursor.getInt(0));
+            product.setItemName(cursor.getString(1));
+            product.setItemDescription(cursor.getString(2));
+            product.setItemPrice(cursor.getInt(3));
+
+            productList.add(product);
+        }
+
+        databaseAccess.close();
+        ProductPassing passing = ProductPassing.getInstance();
+        passing.setPassingProductsList(productList);
     }
-  }
+
 }

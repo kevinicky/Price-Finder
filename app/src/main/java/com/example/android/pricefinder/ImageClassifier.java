@@ -19,7 +19,10 @@ import android.app.Activity;
 import android.content.res.AssetFileDescriptor;
 import android.graphics.Bitmap;
 import android.os.SystemClock;
+import android.text.style.ForegroundColorSpan;
 import android.util.Log;
+
+import com.example.android.pricefinder.model.Product;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -83,6 +86,8 @@ public class ImageClassifier {
   private static final int FILTER_STAGES = 3;
   private static final float FILTER_FACTOR = 0.4f;
 
+  private static ArrayList<Product> productList;
+
   private PriorityQueue<Map.Entry<String, Float>> sortedLabels =
 	  new PriorityQueue<>(
 		  RESULTS_TO_SHOW,
@@ -92,6 +97,7 @@ public class ImageClassifier {
 			  return (o1.getValue()).compareTo(o2.getValue());
 			}
 		  });
+
 
   /** Initializes an {@code ImageClassifier}. */
   ImageClassifier(Activity activity) throws IOException {
@@ -103,6 +109,7 @@ public class ImageClassifier {
 	imgData.order(ByteOrder.nativeOrder());
 	labelProbArray = new float[1][labelList.size()];
 	filterLabelProbArray = new float[FILTER_STAGES][labelList.size()];
+
 	Log.d(TAG, "Created a Tensorflow Lite Image Classifier.");
   }
 
@@ -211,32 +218,23 @@ public class ImageClassifier {
       final int size = sortedLabels.size();
       for (int i = 0; i < size; ++i) {
           Map.Entry<String, Float> label = sortedLabels.poll();
-          if (label.getValue() < 0.5){
+          if (label.getValue() <= 0.4){
               return "No object detected :(";
           }
+          ProductPassing passing = ProductPassing.getInstance();
+          productList = passing.getPassingProductsList();
 
-          textToShow = label.getKey();
-          String price = " Rp. ";
-
-          if(textToShow.equals("Ultramilk")){
-              price = price + "4500";
-          }
-          else if (textToShow.equals("Indomie Aceh")){
-              price = price + "2400";
-          }
-          else if (textToShow.equals("Torabika Cappucino")){
-              price = price + "1200";
-          }
-          else if (textToShow.equals("Citato Sapi Panggang")){
-              price = price + "3300";
-          }
-          else {
-              price = price + "22000";
+          for (int j = 0; j < productList.size(); j++){
+              if (Integer.parseInt(label.getKey()) == productList.get(j).getItemID()){
+                  textToShow = String.format("%s, %s\nPrice IDR%d", productList.get(j).getItemName(), productList.get(j).getItemDescription(), productList.get(j).getItemPrice());
+                  break;
+              }
+              else{
+                  textToShow = "Item Not Found";
+              }
           }
 
-          textToShow = textToShow + " " + price;
-
-          }
+      }
       return textToShow;
   }
 }
