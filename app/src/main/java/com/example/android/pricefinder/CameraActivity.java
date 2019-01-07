@@ -41,10 +41,7 @@ public class CameraActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
 
-        if (null == savedInstanceState) {
-            getFragmentManager().beginTransaction().replace(R.id.container, Camera2BasicFragment.newInstance()).commit();
-        }
-
+        //firebase database
         productList = new ArrayList<>();
         DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
         DatabaseReference productRef = rootRef.child("product");
@@ -70,6 +67,12 @@ public class CameraActivity extends Activity {
 
         ProductPassing passing = ProductPassing.getInstance();
         passing.setPassingProductsList(productList);
+
+
+        if (null == savedInstanceState) {
+            getFragmentManager().beginTransaction().replace(R.id.container, Camera2BasicFragment.newInstance()).commit();
+
+        }
     }
 
 
