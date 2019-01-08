@@ -45,6 +45,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v13.app.FragmentCompat;
 import android.support.v4.content.ContextCompat;
 import android.text.method.ScrollingMovementMethod;
@@ -55,8 +56,17 @@ import android.view.Surface;
 import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.android.pricefinder.model.Product;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -68,7 +78,7 @@ import java.util.concurrent.TimeUnit;
 
 /** Basic fragments for the Camera. */
 public class Camera2BasicFragment extends Fragment
-    implements FragmentCompat.OnRequestPermissionsResultCallback {
+    implements FragmentCompat.OnRequestPermissionsResultCallback, View.OnClickListener {
 
   /** Tag for the {@link Log}. */
   private static final String TAG = "TfLiteCameraDemo";
@@ -122,6 +132,7 @@ public class Camera2BasicFragment extends Fragment
 
   /** An {@link AutoFitTextureView} for camera preview. */
   private AutoFitTextureView textureView;
+  private ImageView imageView;
 
   /** A {@link CameraCaptureSession } for camera preview. */
   private CameraCaptureSession captureSession;
@@ -290,6 +301,8 @@ public class Camera2BasicFragment extends Fragment
   @Override
   public void onViewCreated(final View view, Bundle savedInstanceState) {
     textureView = (AutoFitTextureView) view.findViewById(R.id.texture);
+    imageView = view.findViewById(R.id.info);
+    imageView.setOnClickListener(this);
     textView = (TextView) view.findViewById(R.id.text);
   }
 
@@ -667,7 +680,43 @@ public class Camera2BasicFragment extends Fragment
     showToast(textToShow);
   }
 
-  /** Compares two {@code Size}s based on their areas. */
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.info:{
+                ArrayList<Product> productList = new ArrayList<>();
+                DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
+                DatabaseReference productRef = rootRef.child("product");
+                ValueEventListener valueEventListener = new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        for (DataSnapshot ds : dataSnapshot.getChildren()){
+                            Product product = new Product();
+                            product.setItemID(ds.child("id").getValue(Integer.class));
+                            product.setItemName(ds.child("name").getValue(String.class));
+                            product.setItemDescription(ds.child("description").getValue(String.class));
+                            product.setItemPrice(ds.child("price").getValue(Integer.class));
+                            productList.add(product);
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                };
+                productRef.addListenerForSingleValueEvent(valueEventListener);
+
+                ProductPassing passing = ProductPassing.getInstance();
+                passing.setPassingProductsList(productList);
+
+                Toast.makeText(getActivity(), "Data was successfully synchronized", Toast.LENGTH_SHORT).show();
+                break;
+            }
+        }
+    }
+
+    /** Compares two {@code Size}s based on their areas. */
   private static class CompareSizesByArea implements Comparator<Size> {
 
     @Override
@@ -679,7 +728,7 @@ public class Camera2BasicFragment extends Fragment
   }
 
   /** Shows an error message dialog. */
-  public static class ErrorDialog extends DialogFragment {
+  public static class ErrorDialog extends DialogFragment{
 
     private static final String ARG_MESSAGE = "message";
 
